@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>
+        
+
+Dashboard - Eliezer Media
+
+
+    </title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" type="image/png" href="/static/love.png">
+</head>
+<body style="padding-top: 68px;">
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                
+                <a href="/" class="logo">Eliezer Media</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+            <ul class="navbar-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                
+                <li><a href="/dashboard" class="active">Dashboard</a></li>
+                <li><a href="/commands">Commands</a></li>
+                <li><a href="/profile?edit=1" class="username">eliezerkenya</a></li>
+                <li><a href="/logout" class="btn-logout">Logout</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile sliding nav drawer -->
+    <div id="navOverlay" class="nav-overlay" aria-hidden="true"></div>
+    <aside id="navDrawer" class="nav-drawer" aria-hidden="true">
+        <div class="nav-drawer-header">
+            <a href="/" class="logo">Home</a>
+            <button id="navClose" class="nav-close" aria-label="Close menu">✕</button>
+        </div>
+        <ul class="nav-drawer-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about" class="active">About</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/commands">Commands</a></li>
+            
+            <li><a href="/profile?edit=1">Profile</a></li>
+            <li><a href="/logout">Logout</a></li>
+            
+        </ul>
+    </aside>
+
+    <main>
+        
+<div class="container">
+    <div class="dashboard">
+        <div class="dashboard-header">
+            <h1>Dashboard</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search here..." class="search-input">
+            </div>
+        </div>
+
+        <div class="dashboard-content">
+            <div class="buttons-section">
+                <h2>Available Commands</h2>
+                <div class="buttons-grid" id="buttonsContainer"><button class="cmd-btn">Data structures</button><button class="cmd-btn">General IT introduction</button><button class="cmd-btn">Intro to Python</button><button class="cmd-btn">Learn how to code</button><button class="cmd-btn">OOP programming</button></div>
+            </div>
+
+            <div class="output-section">
+                <h2>Output</h2>
+                <div class="output-box" id="outputBox">
+                    <p class="placeholder">Command output will appear here...</p>
+                </div>
+                <div class="output-info">
+                    <span id="statusMsg" class="status-msg">Ready</span>
+                    <span id="timestamp" class="timestamp"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Confirmation Dialog -->
+<div id="dialog" class="dialog hidden">
+    <div class="dialog-content">
+        <h2 id="dialogTitle">Execute Command</h2>
+        <p id="dialogMessage">Are you sure?</p>
+        <div class="dialog-actions">
+            <button class="btn btn-secondary" onclick="closeDialog()">Back</button>
+            <button class="btn btn-primary" id="confirmBtn" onclick="confirmExecute()">Learn more</button>
+        </div>
+    </div>
+</div>
+
+    </main>
+
+    <footer>
+        <p>Contact us for more informaattion by emailing us <a href="mailto:dev.eliezer.media@gmail.com">here</a></p>
+        <p>© 2026 eliezerkenya. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+    
+<script src="/static/js/dashboard.js"></script>
+
+
+</body></html>
